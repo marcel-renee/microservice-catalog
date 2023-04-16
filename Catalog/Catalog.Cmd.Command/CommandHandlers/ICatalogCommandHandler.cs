@@ -1,6 +1,6 @@
-﻿using Catalog.Cmd.Api.Commands;
+﻿using Catalog.Cmd.Aplication.Commands;
 
-namespace Catalog.Cmd.Api.CommandHandlers
+namespace Catalog.Cmd.Aplication.CommandHandlers
 {
     public interface ICatalogCommandHandler
     {

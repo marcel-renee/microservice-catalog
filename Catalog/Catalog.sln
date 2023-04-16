@@ -11,21 +11,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog.Cmd", "Catalog.Cmd"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog.Query", "Catalog.Query", "{9EDD6802-D79A-43DB-83E8-055F89E3A099}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Cmd.Api", "Catalog.Cmd.Api\Catalog.Cmd.Api.csproj", "{D352A3F7-78CA-42B4-A82F-E370CD8F97A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Cmd.Api", "Catalog.Cmd.Api\Catalog.Cmd.Api.csproj", "{D352A3F7-78CA-42B4-A82F-E370CD8F97A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Cmd.Domain", "Catalog.Cmd.Domain\Catalog.Cmd.Domain.csproj", "{7A9C8B61-6D00-44FA-9C7F-DA23822AF140}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Cmd.Domain", "Catalog.Cmd.Domain\Catalog.Cmd.Domain.csproj", "{7A9C8B61-6D00-44FA-9C7F-DA23822AF140}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Cmd.Infrastructure", "Catalog.Cmd.Infrastructure\Catalog.Cmd.Infrastructure.csproj", "{B479F816-CE95-4B9C-B91D-E7A71B742959}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Cmd.Infrastructure", "Catalog.Cmd.Infrastructure\Catalog.Cmd.Infrastructure.csproj", "{B479F816-CE95-4B9C-B91D-E7A71B742959}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Query.Api", "Catalog.Query.Api\Catalog.Query.Api.csproj", "{B0CF28CC-77D4-46CE-B6EE-418098B50D29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Query.Api", "Catalog.Query.Api\Catalog.Query.Api.csproj", "{B0CF28CC-77D4-46CE-B6EE-418098B50D29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Query.Domain", "Catalog.Query.Domain\Catalog.Query.Domain.csproj", "{ACDCBB3D-ADFB-4901-A0A5-1D3887B46E0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Query.Domain", "Catalog.Query.Domain\Catalog.Query.Domain.csproj", "{ACDCBB3D-ADFB-4901-A0A5-1D3887B46E0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Query.Infrastructure", "Catalog.Query.Infrastructure\Catalog.Query.Infrastructure.csproj", "{27684194-94F9-4D28-822E-16C940AE1D58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Query.Infrastructure", "Catalog.Query.Infrastructure\Catalog.Query.Infrastructure.csproj", "{27684194-94F9-4D28-822E-16C940AE1D58}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog.Common", "Catalog.Common", "{18626F34-E68C-4C07-A303-F3A60E4DAF12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Common", "Catalog.Common\Catalog.Common.csproj", "{B72A1398-EA3D-4654-836E-AEC79B0C8966}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Common", "Catalog.Common\Catalog.Common.csproj", "{B72A1398-EA3D-4654-836E-AEC79B0C8966}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Cmd.Command", "Catalog.Cmd.Command\Catalog.Cmd.Command.csproj", "{EAFBA3B7-F92A-420C-8A65-E67BF5D10F65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,10 @@ Global
 		{B72A1398-EA3D-4654-836E-AEC79B0C8966}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B72A1398-EA3D-4654-836E-AEC79B0C8966}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B72A1398-EA3D-4654-836E-AEC79B0C8966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAFBA3B7-F92A-420C-8A65-E67BF5D10F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAFBA3B7-F92A-420C-8A65-E67BF5D10F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAFBA3B7-F92A-420C-8A65-E67BF5D10F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAFBA3B7-F92A-420C-8A65-E67BF5D10F65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +84,7 @@ Global
 		{ACDCBB3D-ADFB-4901-A0A5-1D3887B46E0D} = {9EDD6802-D79A-43DB-83E8-055F89E3A099}
 		{27684194-94F9-4D28-822E-16C940AE1D58} = {9EDD6802-D79A-43DB-83E8-055F89E3A099}
 		{B72A1398-EA3D-4654-836E-AEC79B0C8966} = {18626F34-E68C-4C07-A303-F3A60E4DAF12}
+		{EAFBA3B7-F92A-420C-8A65-E67BF5D10F65} = {07E3BD9E-18EB-497A-95FE-3307B1406C34}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6C52CFCC-4054-4B84-94E8-3EDCE8231C5C}

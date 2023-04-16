@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\CQRS\CQRS.Core\CQRS.Core.csproj" />
+    <ProjectReference Include="..\Catalog.Cmd.Domain\Catalog.Cmd.Domain.csproj" />
+    <ProjectReference Include="..\Catalog.Cmd.Infrastructure\Catalog.Cmd.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

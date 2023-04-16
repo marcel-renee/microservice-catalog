@@ -1,6 +1,6 @@
 ﻿using Catalog.Common.DTOs;
 
-namespace Catalog.Cmd.Api.DTOs
+namespace Catalog.Cmd.Aplication.DTOs
 {
     public class NewProductCategoryResponse : BaseResponse
     {

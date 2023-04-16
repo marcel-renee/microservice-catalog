@@ -10,7 +10,6 @@ namespace CQRS.Core.Messages
 {
     public abstract class Message
     {
-        [BsonGuidRepresentation(GuidRepresentation.CSharpLegacy)]
         public Guid Id { get; set; }
     }
 }

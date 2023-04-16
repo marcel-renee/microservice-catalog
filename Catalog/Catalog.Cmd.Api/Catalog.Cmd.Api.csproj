@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\CQRS\CQRS.Core\CQRS.Core.csproj" />
+    <ProjectReference Include="..\Catalog.Cmd.Aplication\Catalog.Cmd.Command.csproj" />
     <ProjectReference Include="..\Catalog.Cmd.Domain\Catalog.Cmd.Domain.csproj" />
     <ProjectReference Include="..\Catalog.Cmd.Infrastructure\Catalog.Cmd.Infrastructure.csproj" />
   </ItemGroup>

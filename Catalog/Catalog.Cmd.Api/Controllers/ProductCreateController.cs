@@ -1,10 +1,10 @@
-﻿using Catalog.Cmd.Api.Commands;
-using Catalog.Cmd.Api.DTOs;
+﻿using Catalog.Cmd.Aplication.Commands;
+using Catalog.Cmd.Aplication.DTOs;
 using Catalog.Common.DTOs;
 using CQRS.Core.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Catalog.Cmd.Api.Controllers
+namespace Catalog.Cmd.Aplication.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
