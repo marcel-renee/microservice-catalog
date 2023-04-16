@@ -1,6 +1,6 @@
 ﻿using CQRS.Core.Commands;
 
-namespace Catalog.Cmd.Aplication.Commands
+namespace Catalog.Cmd.Command.Commands
 {
     public class ProductChangeCategoryCommand : BaseCommand
     {

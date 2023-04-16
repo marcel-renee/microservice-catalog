@@ -1,9 +1,9 @@
-﻿using Catalog.Cmd.Aplication.Commands;
+﻿using Catalog.Cmd.Command.Commands;
 using Catalog.Cmd.Domain.Aggregates;
 using Catalog.Common.Events;
 using CQRS.Core.Handlers;
 
-namespace Catalog.Cmd.Aplication.CommandHandlers
+namespace Catalog.Cmd.Command.CommandHandlers
 {
     public class CatalogCommandHandler : ICatalogCommandHandler
     {

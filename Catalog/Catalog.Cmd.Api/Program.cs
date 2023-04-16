@@ -1,5 +1,5 @@
-using Catalog.Cmd.Aplication.CommandHandlers;
-using Catalog.Cmd.Aplication.Commands;
+using Catalog.Cmd.Command.CommandHandlers;
+using Catalog.Cmd.Command.Commands;
 using Catalog.Cmd.Domain.Aggregates;
 using Catalog.Cmd.Infrastructure.Config;
 using Catalog.Cmd.Infrastructure.Dispatcher;
