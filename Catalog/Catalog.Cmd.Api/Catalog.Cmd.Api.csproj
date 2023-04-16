@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>    
+    <ImplicitUsings>enable</ImplicitUsings>    
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\CQRS\CQRS.Core\CQRS.Core.csproj" />
+    <ProjectReference Include="..\Catalog.Cmd.Domain\Catalog.Cmd.Domain.csproj" />
+    <ProjectReference Include="..\Catalog.Cmd.Infrastructure\Catalog.Cmd.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
