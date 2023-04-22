@@ -30,7 +30,6 @@ namespace Catalog.Query.Infrastructure.Converters
                 nameof(ProductDeleteEvent) => JsonSerializer.Deserialize<ProductDeleteEvent>(json, options),
                 nameof(ProductEditEvent) => JsonSerializer.Deserialize<ProductEditEvent>(json, options),
                 nameof(ProductEditValueEvent) => JsonSerializer.Deserialize<ProductEditValueEvent>(json, options),
-                nameof(ProductChangeCategoryEvent) => JsonSerializer.Deserialize<ProductChangeCategoryEvent>(json, options),
                 nameof(ProductEditStockEvent) => JsonSerializer.Deserialize<ProductEditStockEvent>(json, options),
                 nameof(ProductCategoryCreateEvent) => JsonSerializer.Deserialize<ProductCategoryCreateEvent>(json, options),
                 _ => throw new JsonException($"Type discriminator {typeDiscriminator} is not supported yet!")

@@ -1,7 +1,5 @@
 ﻿using CQRS.Core.Commands;
 using CQRS.Core.Infrastructure;
-using MongoDB.Driver;
-using System.Runtime.CompilerServices;
 
 namespace Catalog.Cmd.Infrastructure.Dispatcher
 {
