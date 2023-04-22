@@ -8,19 +8,19 @@ namespace Catalog.Cmd.Command.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class ProductEditNameDescriptionController : ControllerBase
+    public class ProductEditStockController : ControllerBase
     {
-        private readonly ILogger<ProductEditNameDescriptionController> _logger;
+        private readonly ILogger<ProductEditStockController> _logger;
         private readonly ICommandDispatcher _commandDispatcher;
 
-        public ProductEditNameDescriptionController(ILogger<ProductEditNameDescriptionController> logger, ICommandDispatcher commandDispatcher)
+        public ProductEditStockController(ILogger<ProductEditStockController> logger, ICommandDispatcher commandDispatcher)
         {
             this._logger = logger;
             this._commandDispatcher = commandDispatcher;
         }
 
         [HttpPut]
-        public async Task<ActionResult> ProductEditNameDescription(ProductEditNameDescriptionCommand command)
+        public async Task<ActionResult> ProductEdit(ProductEditStockCommand command)
         {
             try
             {
@@ -28,7 +28,8 @@ namespace Catalog.Cmd.Command.Controllers
 
                 return StatusCode(StatusCodes.Status200OK, new NewProductResponse()
                 {
-                    Message = "New product was edited succesfully"
+                    Id = command.Id,
+                    Message = "Product Stock was updated succesfully"
                 });
             }
             catch (InvalidOperationException ex)

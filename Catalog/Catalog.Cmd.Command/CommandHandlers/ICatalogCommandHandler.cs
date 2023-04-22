@@ -6,10 +6,9 @@ namespace Catalog.Cmd.Command.CommandHandlers
     {
         Task HandleAsync(ProductCreateCommand command);
         Task HandleAsync(ProductDeleteCommand command);
-        Task HandleAsync(ProductEditNameDescriptionCommand command);
+        Task HandleAsync(ProductEditCommand command);
         Task HandleAsync(ProductEditStockCommand command);
-        Task HandleAsync(ProductEditValueCommand command);
-        Task HandleAsync(ProductChangeCategoryCommand command);
+        Task HandleAsync(ProductEditValueCommand command);        
         Task HandleAsync(ProductCategoryCreateCommand command);
     }
 }

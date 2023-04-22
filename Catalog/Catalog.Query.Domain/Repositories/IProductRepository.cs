@@ -13,7 +13,7 @@ namespace Catalog.Query.Domain.Repositories
         Task UpdateAsync(ProductEntity product);
         Task DeleteAsync(Guid productId);
         Task<ProductEntity> GetByIdAsync(Guid productId);
-        Task<List<ProductEntity>> ListAllAsync();
+        Task<List<ProductEntity>> ListAllAsync(bool active);
         Task<List<ProductEntity>> ListByCategoryAsync(Guid categoryId);
     }
 }

@@ -2,6 +2,7 @@
 using Catalog.Query.Domain.Repositories;
 using Catalog.Query.Infrastructure.DataAccess;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.Design;
 
 namespace Catalog.Query.Infrastructure.Repositories
 {
@@ -30,7 +31,9 @@ namespace Catalog.Query.Infrastructure.Repositories
         {
             using DataBaseContext context = _contextFactory.CreateDbContext();
             var product = await GetByIdAsync(productId);
-            context.Products.Remove(product);
+            product.Active = false;
+            context.Products.Update(product);
+            //context.Products.Remove(product);
             _ = await context.SaveChangesAsync();
         }
 
@@ -42,14 +45,16 @@ namespace Catalog.Query.Infrastructure.Repositories
                 .FirstOrDefaultAsync(x => x.Id == productId);
         }
 
-        public async Task<List<ProductEntity>> ListAllAsync()
+        public async Task<List<ProductEntity>> ListAllAsync(bool active)
         {
             using DataBaseContext context = _contextFactory.CreateDbContext();
             return _ = await context.Products
+                .Where(x => x.Active == active)
                 .AsNoTracking()
                 .Include(x => x.Category).AsNoTracking()
                 .ToListAsync();
         }
+
 
         public async Task<List<ProductEntity>> ListByCategoryAsync(Guid categoryId)
         {

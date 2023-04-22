@@ -27,10 +27,10 @@ namespace Catalog.Cmd.Command.CommandHandlers
         }
 
 
-        public async Task HandleAsync(ProductEditNameDescriptionCommand command)
+        public async Task HandleAsync(ProductEditCommand command)
         {
             var aggregate = await _eventSourcingHandler.GetByIdAsync(command.Id);
-            aggregate.EditNameDescription(command.Name,command.Description);
+            aggregate.EditProduct(command.Name,command.Description, command.CategoryId);
             await _eventSourcingHandler.SaveAsync(aggregate);
         }
 
@@ -38,13 +38,6 @@ namespace Catalog.Cmd.Command.CommandHandlers
         {
             var aggregate = await _eventSourcingHandler.GetByIdAsync(command.Id);
             aggregate.EditStock(command.Stock);
-            await _eventSourcingHandler.SaveAsync(aggregate);
-        }
-
-        public async Task HandleAsync(ProductChangeCategoryCommand command)
-        {
-            var aggregate = await _eventSourcingHandler.GetByIdAsync(command.Id);
-            aggregate.ChangeCategory(command.CategoryId);
             await _eventSourcingHandler.SaveAsync(aggregate);
         }
 

@@ -43,12 +43,13 @@ namespace Catalog.Query.Infrastructure.Handlers
             await _productRepository.DeleteAsync(@event.Id);
         }
 
-        public async Task On(ProductEditNameDescriptionEvent @event)
+        public async Task On(ProductEditEvent @event)
         {
             var product = await _productRepository.GetByIdAsync(@event.Id);
             product.Name = @event.Name;
             product.Description = @event.Description;
             product.ModificationDate = @event.ModificationDate;
+            product.CategoryId = @event.CategoryId;
             await _productRepository.UpdateAsync(product);
         }
 
@@ -65,14 +66,6 @@ namespace Catalog.Query.Infrastructure.Handlers
         {
             var product = await _productRepository.GetByIdAsync(@event.Id);
             product.Stock = @event.Stock;
-            product.ModificationDate = @event.ModificationDate;
-            await _productRepository.UpdateAsync(product);
-        }
-
-        public async Task On(ProductChangeCategoryEvent @event)
-        {
-            var product = await _productRepository.GetByIdAsync(@event.Id);
-            product.CategoryId = @event.CategoryId;
             product.ModificationDate = @event.ModificationDate;
             await _productRepository.UpdateAsync(product);
         }

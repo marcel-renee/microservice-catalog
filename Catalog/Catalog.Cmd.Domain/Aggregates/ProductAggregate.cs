@@ -19,7 +19,7 @@ namespace Catalog.Cmd.Domain.Aggregates
             _id = id;
         }
 
-        public ProductAggregate(Guid id,string name, string description, decimal value, int stock, Guid categoryId)
+        public ProductAggregate(Guid id, string name, string description, decimal value, int stock, Guid categoryId)
         {
             RaiseEvent(new ProductCreateEvent()
             {
@@ -40,7 +40,7 @@ namespace Catalog.Cmd.Domain.Aggregates
             _active = true;
         }
 
-        public void EditNameDescription(string name,string description)
+        public void EditProduct(string name, string description, Guid CategoryId)
         {
             if (!_active)
                 throw new InvalidOperationException("You canot change the name of an inactive Product");
@@ -49,16 +49,17 @@ namespace Catalog.Cmd.Domain.Aggregates
             if (string.IsNullOrWhiteSpace(description))
                 throw new InvalidOperationException($"The value of {nameof(description)} name canot be null or empty. Please provide a valid {nameof(description)}");
 
-            RaiseEvent(new ProductEditNameDescriptionEvent()
+            RaiseEvent(new ProductEditEvent()
             {
                 Id = _id,
                 Name = name,
                 Description = description,
-                ModificationDate = DateTime.Now
+                ModificationDate = DateTime.Now,
+                CategoryId = CategoryId
             });
         }
 
-        public void Apply(ProductEditNameDescriptionEvent @event)
+        public void Apply(ProductEditEvent @event)
         {
             _id = @event.Id;
         }
@@ -106,13 +107,6 @@ namespace Catalog.Cmd.Domain.Aggregates
             _id = @event.Id;
         }
 
-        public void ChangeCategory(Guid categoryId)
-        {
-            if (!_active)
-                throw new InvalidOperationException("You canot change the category of an inactive Product");
-            RaiseEvent(new ProductChangeCategoryEvent());
-        }
-
         public void Delete()
         {
             RaiseEvent(new ProductDeleteEvent()
@@ -126,7 +120,7 @@ namespace Catalog.Cmd.Domain.Aggregates
             _id = @event.Id;
             _active = false;
         }
-        public void CreateCategory(Guid id,string categoryName, string categoryDescription)
+        public void CreateCategory(Guid id, string categoryName, string categoryDescription)
         {
             RaiseEvent(new ProductCategoryCreateEvent()
             {

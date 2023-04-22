@@ -11,10 +11,9 @@ namespace Catalog.Query.Infrastructure.Handlers
     {
         Task On(ProductCreateEvent @event);
         Task On(ProductDeleteEvent @event);
-        Task On(ProductEditNameDescriptionEvent @event);
+        Task On(ProductEditEvent @event);
         Task On(ProductEditValueEvent @event);
-        Task On(ProductEditStockEvent @event);
-        Task On(ProductChangeCategoryEvent @event);
+        Task On(ProductEditStockEvent @event);        
         Task On(ProductCategoryCreateEvent @event);
 
     }

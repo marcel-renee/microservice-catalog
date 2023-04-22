@@ -34,10 +34,9 @@ var commandHandler = builder.Services.BuildServiceProvider().GetRequiredService<
 var dispatcher = new CommandDispatcher();
 dispatcher.RegisterHandler<ProductCreateCommand>(commandHandler.HandleAsync);
 dispatcher.RegisterHandler<ProductDeleteCommand>(commandHandler.HandleAsync);
-dispatcher.RegisterHandler<ProductEditNameDescriptionCommand>(commandHandler.HandleAsync);
+dispatcher.RegisterHandler<ProductEditCommand>(commandHandler.HandleAsync);
 dispatcher.RegisterHandler<ProductEditValueCommand>(commandHandler.HandleAsync);
 dispatcher.RegisterHandler<ProductEditStockCommand>(commandHandler.HandleAsync);
-dispatcher.RegisterHandler<ProductChangeCategoryCommand>(commandHandler.HandleAsync);
 dispatcher.RegisterHandler<ProductCategoryCreateCommand>(commandHandler.HandleAsync);
 
 builder.Services.AddSingleton<ICommandDispatcher>(_ => dispatcher);

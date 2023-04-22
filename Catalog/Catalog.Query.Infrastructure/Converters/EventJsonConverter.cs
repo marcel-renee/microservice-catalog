@@ -28,7 +28,7 @@ namespace Catalog.Query.Infrastructure.Converters
             {
                 nameof(ProductCreateEvent) => JsonSerializer.Deserialize<ProductCreateEvent>(json, options),
                 nameof(ProductDeleteEvent) => JsonSerializer.Deserialize<ProductDeleteEvent>(json, options),
-                nameof(ProductEditNameDescriptionEvent) => JsonSerializer.Deserialize<ProductEditNameDescriptionEvent>(json, options),
+                nameof(ProductEditEvent) => JsonSerializer.Deserialize<ProductEditEvent>(json, options),
                 nameof(ProductEditValueEvent) => JsonSerializer.Deserialize<ProductEditValueEvent>(json, options),
                 nameof(ProductChangeCategoryEvent) => JsonSerializer.Deserialize<ProductChangeCategoryEvent>(json, options),
                 nameof(ProductEditStockEvent) => JsonSerializer.Deserialize<ProductEditStockEvent>(json, options),
