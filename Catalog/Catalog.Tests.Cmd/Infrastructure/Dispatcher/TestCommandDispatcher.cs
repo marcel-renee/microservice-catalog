@@ -42,12 +42,13 @@ namespace Catalog.Tests.Cmd.Infrastructure.Dispatcher
         }
 
         [Test]
-        public async Task TestSendAsyncKo()
+        public Task TestSendAsyncKo()
         {
             var dispatcher = new CommandDispatcher();
             var productCreateCommand = new ProductCreateCommand();
             Assert.ThrowsAsync<ArgumentNullException>(() => dispatcher.SendAsync(productCreateCommand));
             Assert.IsTrue(true);
+            return Task.CompletedTask;
         }
     }
 }
